@@ -2,7 +2,7 @@ services:
   tibero-db:
     container_name: tibero-db
     image: ghcr.io/bob-park/tibero6
-    hostname: malgn-dev-tibero
+    hostname: hostname
     ports:
       - 8629:8629
     volumes:
