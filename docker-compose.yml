@@ -12,5 +12,4 @@ services:
       - 8629:8629
     volumes:
       - ./tibero/database:/home/tibero/tibero6/database
-      - ./tibero/init/:/home/tibero/tibero6/instance/tibero
       - ./tibero/license:/home/tibero/tibero6/license
