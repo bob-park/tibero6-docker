@@ -2,6 +2,11 @@ services:
   tibero-db:
     container_name: tibero-db
     image: ghcr.io/bob-park/tibero6
+    build:
+      dockerfile: ./Dockerfile
+      x-bake:
+        platforms:
+          - linux/amd64
     hostname: hostname
     ports:
       - 8629:8629

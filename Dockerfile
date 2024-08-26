@@ -12,9 +12,10 @@ COPY ./tibero6.tar.gz /usr/local/tibero6.tar.gz
 COPY ./init.sql init.sql
 COPY ./start-tbboot.sh start-tbboot.sh
 
-RUN apt update
 RUN apt-get update
-RUN apt install -y libaio1 libncurses5
+RUN apt-get update
+RUN apt-get install -y libaio1 libncurses5
+RUN apt-get install openjdk-8-jdk -y
 
 RUN tar -xzvf /usr/local/tibero6.tar.gz
 RUN chmod +x /home/tibero/tibero6/bin/tbboot

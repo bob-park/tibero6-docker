@@ -20,19 +20,20 @@ init_database(){
 
 	echo "initialize tibero database..."
 
-	generate_tip
+	#generate_tip
 
 	/home/tibero/tibero6/bin/tbboot nomount
 	tbsql sys/tibero @'/home/tibero/init.sql'
 }
 
 
+generate_tip
+
 
 if [ ! "$db_dir" ] ; then
 	init_database
-else 
-	generate_tip
 fi
+
 
 echo "starting tibero database..."
 
